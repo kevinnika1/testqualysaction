@@ -18,10 +18,9 @@ jobs:
        runs-on: ubuntu-latest
        steps:
         - id: foo
-          uses: kevinnika1/QualysWAS-Action@vDebug2
+          uses: kevinnika1/QualysWAS-Action@vDebug3
           with:
             qualysuser: ${{ secrets.qualysuser }}
             qualyspass: ${{ secrets.qualyspass }}
             website: 'https://t5s-tst.nlv.yourmenu.cloud'
             project: 'sonarcloud example pipeline'
-            pat: ${{ secrets.PAT }}
