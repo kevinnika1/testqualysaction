@@ -22,5 +22,5 @@ jobs:
           with:
             qualysuser: ${{ secrets.qualysuser }}
             qualyspass: ${{ secrets.qualyspass }}
-            website: 'https://t5s-tst.nlv.yourmenu.cloud'
-            project: 'sonarcloud example pipeline'
+            website: https://t5s-tst.nlv.yourmenu.cloud
+            project: sonarcloud example pipeline
