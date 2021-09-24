@@ -18,7 +18,7 @@ jobs:
        runs-on: ubuntu-latest
        steps:
         - id: foo
-          uses: kevinnika1/QualysWAS-Action@v0.5
+          uses: kevinnika1/QualysWAS-Action@v0.6
           with:
             qualysuser: ${{ secrets.qualysuser }}
             qualyspass: ${{ secrets.qualyspass }}
