@@ -16,7 +16,6 @@ jobs:
 
   DAST: 
        runs-on: ubuntu-latest
-       needs: [DeployToEKS]
        steps:
         - id: foo
           uses: kevinnika1/QualysWAS-Action@v0.3
