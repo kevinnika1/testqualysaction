@@ -1,0 +1,27 @@
+name: testing my action
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+
+  DAST: 
+       runs-on: ubuntu-latest
+       needs: [DeployToEKS]
+       steps:
+        - id: foo
+          uses: kevinnika1/QualysWAS-Action@v0.3
+          with:
+            qualysuser: ${{ secrets.qualysuser }}
+            qualyspass: ${{ secrets.qualyspass }}
+            website: 'https://t5s-tst.nlv.yourmenu.cloud'
+            project: 'sonarcloud example pipeline'
